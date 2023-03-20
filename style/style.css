@@ -1,0 +1,303 @@
+body {
+    margin: 0;
+    font-family: "Arial";
+    cursor: url('cursor.cur'), auto;
+}
+
+hr {
+    margin: 30px 0;
+    border: none;
+    border-top: 1px solid #e4e4ec;
+}
+
+.wrapper {
+    margin: 0 auto;
+    max-width: 960px;
+}
+
+.flex-between {
+    display: flex;
+    justify-content: space-between;
+}
+
+.container {
+    background-color: #1f1f56;
+    padding: 11px 0;
+}
+
+.menu ul {
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    display: inline-block;
+}
+
+.menu li:hover>a {
+    color: #fd8300;
+}
+
+.menu a {
+    font-size: 14px;
+    letter-spacing: 2px;
+    line-height: 1.71em;
+    color: #b1b1d2;
+    text-decoration: none;   
+}
+
+.main-menu li {
+    margin-right: 25px;
+}
+
+.social-networks li {
+    margin-left: 22px;
+}
+
+.contact {
+    padding: 20px 0;
+    align-items: center;
+}
+
+.phone p {
+    margin: 0;
+}
+
+.phone a {
+    font-size: 18px;
+    line-height: 1.33em;
+    color: #25252c;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.mail p {
+    margin: 0;
+}
+
+.mail a {
+    font-size: 16px;
+    line-height: 1.5em;
+    text-decoration: underline;
+    color: #25252c;
+}
+
+.skype a {
+    text-decoration: none;
+}
+
+.call-back {
+    padding: 12px 25px;
+    font-size: 16px;
+    line-height: 1.5em;
+    color: #25252c;
+    font-weight: bold;
+    border-radius: 25px;
+    background-color: #ffffff;
+    border: 2px solid #fd8300;
+    text-align: center;   
+    text-decoration: none; 
+}
+
+.img-text {
+    padding-top: 55px;
+    padding-bottom: 40px;
+    background-image: url(img/Rectangle.png);
+    background-size: cover;
+}
+
+.img-text p {
+    margin: 0;
+}
+
+.img-text b {
+    font-size: 24px;
+    line-height: 1em;
+    color: #fd8300;
+    font-family: "Arial";
+}
+
+.head {
+    font-size: 30px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 700;
+    font-family: "Roboto Slab";
+    text-align: center;
+    
+}
+
+.text {
+    font-size: 14px;
+    line-height: 1.71em;
+    color: #fff;
+    font-family: "Arial";
+    text-align: center;
+}
+
+.price {
+    font-size: 40px;
+    color: #fd8300;
+    font-weight: bold;
+    font-family: "Arial";
+    text-align: center;
+
+}
+
+h1 {
+    margin-top: 10px;
+    font-size: 30px;
+    color: #24242b;
+    font-weight: 700;
+    font-family: "Roboto Slab";
+}
+
+
+.main-wrapper {
+    padding: 35px 0 40px;
+    column-gap: 28px;
+}
+
+.about p {
+    font-size: 14px;
+    line-height: 1.71em;
+    color: #666666;
+    font-family: "Arial";
+}
+
+.about a {
+    font-size: 14px;
+    line-height: 1.71em;
+    text-decoration: underline;
+    color: #fd8300;
+    font-weight: bold;
+    font-family: "Arial";
+}
+
+.category p {
+    margin: 0;
+    padding: 14px;
+    width: 220px;
+    font-size: 16px;
+    line-height: 1.5em;
+    color: #fff;
+    font-weight: 700;
+    font-family: "Roboto Slab";
+    border-radius: 3px;
+    background-color: #1f1f56;
+}
+
+.category ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.category li a {
+    display: block;
+    padding: 14px;
+    background-color: #e4e4ec;
+    font-size: 14px;
+    line-height: 1.71em;
+    color: #25252c;
+    font-family: "Arial";
+    text-decoration: none;
+}
+
+.category li:hover>a {
+    color: #fff;
+    background-color: #fd8300;    
+}
+
+.category-in li a {
+    padding-left: 30px;
+    font-size: 14px;
+    line-height: 1.71em;
+    color: #666666;
+    font-family: "Arial";
+}
+
+.category-in li a:hover {
+    background-color: #cecedd;
+    color: #666666;
+
+    
+}
+
+.popular {
+    font-size: 24px;
+    line-height: 1em;
+    color: #24242b;
+    font-weight: 700;
+    font-family: "Roboto Slab";
+}
+
+.project p {
+    margin: 0;
+}
+
+.project figure {
+    margin: 0;
+}
+
+h2 {
+    margin: 0;
+}
+
+.project a {
+    font-size: 14px;
+    line-height: 24px;
+    color: #1f1f56;
+    font-weight: bold;
+    font-family: "Arial";
+    text-decoration: none;
+}
+
+.project a:hover {
+    text-decoration: underline;
+}
+
+.project p {
+    font-size: 13px;
+    line-height: 1.38em;
+    color: #9999a6;
+    font-family: "Arial";
+}
+
+.navigation {
+    padding: 40px 0 30px;
+    background-color: #ededf5;
+}
+
+.navigation ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.navigation li a {
+    font-size: 14px;
+    line-height: 26px;
+    color: #666666;
+    font-family: "Arial";
+    text-decoration: none;
+    
+}
+
+.navigation li a:hover {
+    text-decoration: underline;
+    color: #fd8300;   
+}
+
+.copyright {
+    margin: 0 auto;
+    padding: 15px;
+    background-color: #dcdce6;
+    font-size: 13px;
+    line-height: 1.38em;
+    color: #9999a6;
+    font-family: "Arial";
+    text-align: center;
+}
+
