@@ -54,6 +54,25 @@ hr {
     margin-left: 22px;
 }
 
+.social-networks a {
+    display: block;
+    width: 15px;
+    height: 19px;
+    background: url(img/sprite.png) no-repeat;
+}
+
+a.fb {
+    background-position: 0 0;
+}
+
+a.tw {
+    background-position: -17px 0;
+}
+
+a.inst {
+    background-position: -34px 0;
+}
+
 .contact {
     padding: 20px 0;
     align-items: center;
