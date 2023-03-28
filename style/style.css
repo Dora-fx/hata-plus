@@ -116,6 +116,13 @@ a.inst {
     border: 2px solid #fd8300;
     text-align: center;   
     text-decoration: none; 
+    transition: 0.2s;
+}
+
+.call-back:hover {
+    color: #fff;
+    background-color: #fd8300;
+    border: 2px solid #1f1f56;
 }
 
 .img-text {
