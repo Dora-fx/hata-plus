@@ -14,6 +14,19 @@ sup {
     font-size: 0.6em;
 }
 
+input,
+select,
+textarea {
+    box-sizing: border-box;
+}
+
+textarea {
+    min-height: 105px;
+    max-height: 200px;
+    font-family: "Arial";
+    resize: vertical;
+}
+
 .shadow {
     filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.1));
     background-color: #ffffff;
@@ -22,6 +35,10 @@ sup {
 .wrapper {
     margin: 0 auto;
     max-width: 960px;
+}
+
+.mb10 {
+    margin-bottom: 10px;
 }
 
 .flex-between {
@@ -158,6 +175,10 @@ a.inst:hover {
     color: #25252c;
     font-weight: bold;
     text-decoration: none;
+}
+
+.contact-phone {
+    padding: 0;
 }
 
 .stick {
@@ -514,4 +535,119 @@ h2 {
 .table td:last-child {
     text-align: right;
     padding-right: 21px;
+}
+
+.gray-text p {
+    font-size: 14px;
+    line-height: 1.5em;
+    color: #666666; 
+}
+
+.main-contact {
+    margin-bottom: 40px;
+}
+
+.main-contact p {
+    margin: 0;
+    margin-bottom: 13px;
+}
+
+.form {
+    width: 50%;
+}
+
+.flex-form {
+    display: flex;
+    column-gap: 10px;
+    row-gap: 10px;
+    align-items: center;
+}
+
+.flex-form label {
+    width: 100%;
+}
+
+.form h2,
+.contact-page h2 {
+    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 24px;
+    color: #24242b;
+    font-weight: 700;
+    font-family: "Roboto Slab";
+}
+
+.contact-mail {
+    font-size: 16px;
+    line-height: 1.5em;
+    text-decoration: underline;
+    color: #25252c;
+}
+
+.input-style {
+    padding: 12px;
+    width: 100%;
+    font-style: italic;
+    border-radius: 3px;
+    background-color: #ffffff;
+    border: 1px solid #c5c5d4;
+}
+
+.input-style:focus {
+    outline: none;
+}
+
+.submit {
+    flex-grow: 0;
+    padding: 9px 30px;
+    border-radius: 21px;
+    outline: none;
+    border: none;
+    background-color: #fd8300;
+    font-size: 14px;
+    line-height: 1.71em;
+    color: #ffffff;
+    font-weight: bold;
+    text-align: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.submit:hover {
+    color: #24242b;
+    background-color: #c5c5d4;
+}
+
+.check-style {
+    display: none;
+}
+
+.check-style+label {
+    position: relative;
+    padding-left: 25px;
+}
+
+.check-style+label::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 15px;
+    height: 15px;
+    border-radius: 3px;
+    background-color: #ffffff;
+    border: 1px solid #c5c5d4;
+}
+/* 
+.check-style+label::after {
+    content: '';
+    position: absolute;
+    height: 7px;
+    width: 9px;
+    border: 1px;
+    background-color: #1f1f56;
+} */
+
+.checkbox-margin {
+    margin: 0 16px;
 }
