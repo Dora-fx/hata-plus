@@ -27,9 +27,14 @@ textarea {
     resize: vertical;
 }
 
+iframe {
+    border: none;
+}
+
 .shadow {
     filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.1));
     background-color: #ffffff;
+    margin-bottom: 40px;
 }
 
 .wrapper {
@@ -547,6 +552,10 @@ h2 {
     margin-bottom: 40px;
 }
 
+/* .main-contact h1 {
+    padding-top: 40px;
+} */
+
 .main-contact p {
     margin: 0;
     margin-bottom: 13px;
@@ -575,6 +584,10 @@ h2 {
     color: #24242b;
     font-weight: 700;
     font-family: "Roboto Slab";
+}
+
+.form-map {
+    column-gap: 25px;
 }
 
 .contact-mail {
@@ -637,17 +650,22 @@ h2 {
     border-radius: 3px;
     background-color: #ffffff;
     border: 1px solid #c5c5d4;
+    box-sizing: border-box;
 }
-/* 
-.check-style+label::after {
+
+.check-style:checked+label::after {
     content: '';
     position: absolute;
-    height: 7px;
-    width: 9px;
-    border: 1px;
-    background-color: #1f1f56;
-} */
+    top: 3px;
+    left: 4px;
+    height: 6px;
+    width: 8px;
+    border-left: 2px solid #1f1f56;
+    border-bottom: 2px solid #1f1f56;
+    transform: rotate(-45deg);
+    box-sizing: border-box;
+}
 
 .checkbox-margin {
-    margin: 0 16px;
+    margin: 0 13px;
 }
