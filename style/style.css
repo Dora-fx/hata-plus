@@ -1,3 +1,7 @@
+html {
+    font-size: 1px;
+}
+
 body {
     margin: 0;
     font-family: "Arial";
@@ -5,7 +9,7 @@ body {
 }
 
 hr {
-    margin: 30px 0;
+    margin: 20rem 0;
     border: none;
     border-top: 1px solid #e4e4ec;
 }
@@ -21,8 +25,8 @@ textarea {
 }
 
 textarea {
-    min-height: 105px;
-    max-height: 200px;
+    min-height: 105rem;
+    max-height: 200rem;
     font-family: "Arial";
     resize: vertical;
 }
@@ -31,34 +35,47 @@ iframe {
     border: none;
 }
 
+.map {
+    width: 100%;
+    min-height: 250rem;
+}
+
 .shadow {
     filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.1));
     background-color: #ffffff;
     margin-bottom: 40px;
 }
-
+/* костиль для падінгів по горизонталі  */
 .wrapper {
     margin: 0 auto;
-    max-width: 960px;
+    padding-left: 20rem !important; 
+    padding-right: 20rem !important;
+    max-width: 960rem;
 }
 
 .mb10 {
-    margin-bottom: 10px;
+    margin-bottom: 10rem;
 }
 
 .flex-between {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    row-gap: 10rem;
+    flex-wrap: wrap;
 }
 
 .container {
     background-color: #1f1f56;
-    padding: 11px 0;
+    padding: 11rem 0;
 }
 
 .colum {
-    min-width: 219px;
+    min-width: 219rem;
     box-sizing: border-box;
+}
+
+.menu {
+    justify-content: space-between;
 }
 
 .menu ul {
@@ -75,19 +92,80 @@ iframe {
 }
 
 .menu a {
-    font-size: 14px;
-    letter-spacing: 2px;
+    font-size: 14rem;
+    letter-spacing: 2rem;
     line-height: 1.71em;
     color: #b1b1d2;
     text-decoration: none;
 }
 
+.burger {
+    position: relative;
+    width: 30rem;
+
+}
+/* трансформ орігін для фіксації місця */
+.burger span {
+    position: absolute;
+    display: inline-block;
+    height: 3rem;
+    width: 24rem;
+    background-color: #fd8300;
+    transform-origin: left;
+    transition: all 0.3s ease;
+}
+
+.burger span:first-child {
+    top: 0;    
+}
+
+.burger span:nth-child(2) {
+    top: 50%;
+    transform: translateY(-50%);    
+}
+
+.burger span:last-child {
+    bottom: 0;    
+}
+
+.burger-open span:first-child {
+    transform: rotate(42deg);
+}
+
+.burger-open span:last-child {
+    transform: rotate(-42deg);
+}
+
+.burger-open span:nth-child(2) {
+    opacity: 0;
+
+}
+
+.main-menu {
+    display: none;
+}
+
 .main-menu li {
-    margin-right: 25px;
+    margin-right: 25rem;
+}
+
+.menu-open {
+    position: fixed;
+    top: 45rem;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 10rem 20rem !important;
+    width: 100%;
+    text-align: center;
+    background-color: #1f1f56;
+    box-sizing: border-box;
+    z-index: 1;
+
 }
 
 .social-networks li {
-    margin-left: 22px;
+    margin-left: 22rem;
 }
 
 .social-networks a {
@@ -126,7 +204,7 @@ a.inst:hover {
 }
 
 .contact {
-    padding: 20px 0;
+    padding: 20rem 0;
     align-items: center;
 }
 
@@ -137,8 +215,8 @@ a.inst:hover {
 .icon::before {
     content: '';
     position: absolute;
-    top: 3px;
-    left: -30px;
+    top: 3rem;
+    left: -30rem;
     background-image: url(img/sprite.png);
 }
 
@@ -155,6 +233,7 @@ a.inst:hover {
 }
 
 .skype::before {
+    top: 0;
     height: 19px;
     width: 18px;
     background-position: -90px 0;
@@ -162,7 +241,7 @@ a.inst:hover {
 
 .phone,
 .mail {
-    padding-left: 48px;
+    padding-left: 48rem;
 }
 
 .phone p {
@@ -171,11 +250,11 @@ a.inst:hover {
 
 .phone p:first-child,
 .mail p:first-child {
-    margin-bottom: 6px;    
+    margin-bottom: 6rem;    
 }
 
 .phone a {
-    font-size: 18px;
+    font-size: 18rem;
     line-height: 1.33em;
     color: #25252c;
     font-weight: bold;
@@ -186,25 +265,12 @@ a.inst:hover {
     padding: 0;
 }
 
-.stick {
-    position: relative;
-}
-
-.stick::before {
-    content: "";
-    position: absolute;
-    right: -18px;
-    width: 1px;
-    height: 51px;
-    background-color: #e4e4ec;    
-}
-
 .mail p {
     margin: 0;
 }
 
 .mail a {
-    font-size: 16px;
+    font-size: 16rem;
     line-height: 1.5em;
     text-decoration: underline;
     color: #25252c;
@@ -215,12 +281,13 @@ a.skype {
 }
 
 .call-back {
-    padding: 12px 25px;
-    font-size: 16px;
+    display: inline-block;
+    padding: 12rem 25rem;
+    font-size: 16rem;
     line-height: 1.5em;
     color: #25252c;
     font-weight: bold;
-    border-radius: 25px;
+    border-radius: 25rem;
     background-color: #ffffff;
     border: 2px solid #fd8300;
     text-align: center;
@@ -234,9 +301,13 @@ a.skype {
     border: 2px solid #1f1f56;
 }
 
+.colum-call-back {
+    text-align: center;
+}
+
 .img-text {
-    padding-top: 55px;
-    padding-bottom: 40px;
+    padding-top: 55rem;
+    padding-bottom: 40rem;
     background-image: url(img/Rectangle.png);
     background-size: cover;
 }
@@ -246,15 +317,15 @@ a.skype {
 }
 
 .img-text b {
-    font-size: 24px;
+    font-size: 24rem;
     line-height: 1em;
     color: #fd8300;
     font-family: "Arial";
 }
 
 .head {
-    font-size: 30px;
-    letter-spacing: 2px;
+    font-size: 30rem;
+    letter-spacing: 2rem;
     text-transform: uppercase;
     color: #fff;
     font-weight: 700;
@@ -264,7 +335,7 @@ a.skype {
 }
 
 .text {
-    font-size: 14px;
+    font-size: 14rem;
     line-height: 1.71em;
     color: #fff;
     font-family: "Arial";
@@ -272,7 +343,7 @@ a.skype {
 }
 
 .price {
-    font-size: 40px;
+    font-size: 40rem;
     color: #fd8300;
     font-weight: bold;
     font-family: "Arial";
@@ -281,8 +352,8 @@ a.skype {
 }
 
 h1 {
-    margin-top: 10px;
-    font-size: 30px;
+    margin-top: 10rem;
+    font-size: 30rem;
     color: #24242b;
     font-weight: 700;
     font-family: "Roboto Slab";
@@ -290,20 +361,20 @@ h1 {
 
 
 .main-wrapper {
-    padding: 35px 0 40px;
-    column-gap: 28px;
+    padding: 35rem 0 40rem;
+    column-gap: 28rem;
 }
 
 .about p {
-    font-size: 14px;
+    font-size: 14rem;
     line-height: 1.71em;
     color: #666666;
     font-family: "Arial";
 }
 
 .about a {
-    font-size: 14px;
-    line-height: 1.71em;
+    font-size: 14rem;
+    line-height: 1.3em;
     color: #fd8300;
     text-decoration: underline;
     font-weight: bold;
@@ -315,18 +386,21 @@ h1 {
     text-decoration: none;
 }
 
+.category {
+    width: 100%;
+}
+
 .category nav {
     position: sticky;
-    top: 35px;
+    top: 35rem;
     border-radius: 3px;
     overflow: hidden;
 }
 
 .category p {
     margin: 0;
-    padding: 14px;
-    width: 220px;
-    font-size: 16px;
+    padding: 14rem;
+    font-size: 16rem;
     line-height: 1.5em;
     color: #fff;
     font-weight: 700;
@@ -346,9 +420,9 @@ h1 {
 
 .category a {
     display: block;
-    padding: 10px;
+    padding: 10rem;
     background-color: #e4e4ec;
-    font-size: 14px;
+    font-size: 14rem;
     line-height: 1.71em;
     color: #25252c;
     font-family: "Arial";
@@ -371,10 +445,10 @@ h1 {
 .aside-menu>li::before {
     content: "";
     position: absolute;
-    right: 12px;
-    top: 17px;
-    width: 7px;
-    height: 7px;
+    right: 12rem;
+    top: 17rem;
+    width: 7rem;
+    height: 7rem;
     border-bottom: 2px solid #666666;
     border-right: 2px solid #666666;
     box-sizing: border-box;
@@ -392,8 +466,8 @@ h1 {
 }
 
 .category-in li a {
-    padding-left: 30px;
-    font-size: 14px;
+    padding-left: 30rem;
+    font-size: 14rem;
     line-height: 1.71em;
     color: #666666;
     font-family: "Arial";
@@ -407,11 +481,16 @@ h1 {
 }
 
 .popular {
-    font-size: 24px;
+    text-align: center;
+    font-size: 24rem;
     line-height: 1em;
     color: #24242b;
     font-weight: 700;
     font-family: "Roboto Slab";
+}
+
+.project {
+    column-gap: 28rem;
 }
 
 .project p {
@@ -427,8 +506,8 @@ h2 {
 }
 
 .project h2 {
-    font-size: 14px;
-    line-height: 24px;
+    font-size: 14rem;
+    line-height: 24rem;
     color: #1f1f56;
     font-weight: bold;
     font-family: "Arial";
@@ -440,7 +519,7 @@ h2 {
 }
 
 .project p {
-    font-size: 13px;
+    font-size: 13rem;
     line-height: 1.38em;
     color: #9999a6;
     font-family: "Arial";
@@ -463,7 +542,7 @@ h2 {
 }
 
 .navigation {
-    padding: 40px 0 30px;
+    padding: 40rem 0 30rem;
     background-color: #ededf5;
 }
 
@@ -474,8 +553,8 @@ h2 {
 }
 
 .navigation li a {
-    font-size: 14px;
-    line-height: 26px;
+    font-size: 14rem;
+    line-height: 26rem;
     color: #666666;
     font-family: "Arial";
     text-decoration: none;
@@ -489,18 +568,22 @@ h2 {
 
 .copyright {
     margin: 0 auto;
-    padding: 15px;
+    padding: 15rem;
     background-color: #dcdce6;
-    font-size: 13px;
+    font-size: 13rem;
     line-height: 1.38em;
     color: #9999a6;
     font-family: "Arial";
     text-align: center;
 }
 
+.table-wrap {
+    overflow-x: scroll;
+}
+
 .table {
-    margin: 20px 0;
-    width: 100%;
+    margin: 20rem 0;
+    width: 685rem;
     border-collapse: collapse;
     border-radius: 3px;
     overflow: hidden;
@@ -508,9 +591,9 @@ h2 {
 }
 
 .table th {
-    padding: 9px 21px;
+    padding: 9rem 21rem;
     text-align: left;
-    font-size: 14px;
+    font-size: 14rem;
     line-height: 1.71em;
     font-weight: 700;
     font-family: "Roboto Slab";
@@ -519,12 +602,20 @@ h2 {
 }
 
 .table td {
-    padding: 9px 21px;
-    font-size: 14px;
+    padding: 9rem 21rem;
+    font-size: 14rem;
     line-height: 1.71em;
     color: #666666;
     background-color: #e4e4ec;
     box-shadow: inset 0px -1px 0px #cecedd;
+}
+
+.table td:first-child {
+    min-width: 190rem;
+}
+
+.table td:last-child {
+    min-width: 100rem;
 }
 
 .table tr:last-child>td {
@@ -539,26 +630,30 @@ h2 {
 .table th:last-child,
 .table td:last-child {
     text-align: right;
-    padding-right: 21px;
+    padding-right: 21rem;
+}
+
+.gray-text {
+    margin-bottom: 20rem;
 }
 
 .gray-text p {
-    font-size: 14px;
+    font-size: 14rem;
     line-height: 1.5em;
     color: #666666; 
 }
 
 .main-contact {
-    margin-bottom: 40px;
+    margin-bottom: 40rem;
 }
 
-/* .main-contact h1 {
-    padding-top: 40px;
-} */
+.main-contact h1 {
+    text-align: center; 
+}
 
 .main-contact p {
     margin: 0;
-    margin-bottom: 13px;
+    margin-bottom: 5rem;
 }
 
 .form {
@@ -567,8 +662,9 @@ h2 {
 
 .flex-form {
     display: flex;
-    column-gap: 10px;
-    row-gap: 10px;
+    flex-wrap: wrap;
+    column-gap: 10rem;
+    row-gap: 10rem;
     align-items: center;
 }
 
@@ -576,29 +672,45 @@ h2 {
     width: 100%;
 }
 
+.contact-page {
+    justify-content: start;
+}
+
+.form {
+    width: 100%;
+}
+
+.contact-page {
+    column-gap: 28rem;
+}
+
 .form h2,
 .contact-page h2 {
-    margin-bottom: 20px;
-    font-size: 14px;
-    line-height: 24px;
+    margin-bottom: 10rem;
+    font-size: 14rem;
+    line-height: 1.4em;
     color: #24242b;
     font-weight: 700;
     font-family: "Roboto Slab";
 }
 
+.form h2 {
+    text-align: center;
+}
+
 .form-map {
-    column-gap: 25px;
+    column-gap: 25rem;
 }
 
 .contact-mail {
-    font-size: 16px;
+    font-size: 16rem;
     line-height: 1.5em;
     text-decoration: underline;
     color: #25252c;
 }
 
 .input-style {
-    padding: 12px;
+    padding: 12rem;
     width: 100%;
     font-style: italic;
     border-radius: 3px;
@@ -612,12 +724,12 @@ h2 {
 
 .submit {
     flex-grow: 0;
-    padding: 9px 30px;
+    padding: 9rem 30rem;
     border-radius: 21px;
     outline: none;
     border: none;
     background-color: #fd8300;
-    font-size: 14px;
+    font-size: 14rem;
     line-height: 1.71em;
     color: #ffffff;
     font-weight: bold;
@@ -631,13 +743,18 @@ h2 {
     background-color: #c5c5d4;
 }
 
+.checkbox-margin {
+    font-size: 13rem;
+    line-height: 1.61em;
+}
+
 .check-style {
     display: none;
 }
 
 .check-style+label {
     position: relative;
-    padding-left: 25px;
+    padding-left: 25rem;
 }
 
 .check-style+label::before {
@@ -645,8 +762,8 @@ h2 {
     position: absolute;
     top: 0;
     left: 0;
-    width: 15px;
-    height: 15px;
+    width: 15rem;
+    height: 15rem;
     border-radius: 3px;
     background-color: #ffffff;
     border: 1px solid #c5c5d4;
@@ -656,16 +773,129 @@ h2 {
 .check-style:checked+label::after {
     content: '';
     position: absolute;
-    top: 3px;
-    left: 4px;
-    height: 6px;
-    width: 8px;
+    top: 3rem;
+    left: 4rem;
+    height: 6rem;
+    width: 8rem;
     border-left: 2px solid #1f1f56;
     border-bottom: 2px solid #1f1f56;
     transform: rotate(-45deg);
     box-sizing: border-box;
 }
 
-.checkbox-margin {
-    margin: 0 13px;
+
+
+.footer {
+    text-align: center;
+}
+
+@media screen and (min-width: 425px) {
+    .contact-page {
+        padding-left: 50rem;
+    }
+}
+
+@media screen and (min-width: 478px) {
+    .footer {
+        display: flex;
+    }
+    .contact {
+        column-gap: 28rem;
+    } 
+}
+
+@media screen and (min-width: 768px) {
+    .flex-between {
+        justify-content: space-between;
+    }
+    .table-wrap {
+        overflow-x: visible;
+    }
+    .table {
+        width: 100%;
+    }
+    .burger {
+        display: none;
+    }
+    .main-menu {
+        display: block;
+    }
+    .colum,
+    .form h2,
+    .popular {
+        text-align: left;
+    }
+    .colum-call-back {
+        margin: 0 auto;
+        text-align: center;
+    }
+    .project {
+        column-gap: 20rem;
+    }
+    .main-contact p {
+        margin-bottom: 13rem;
+    }
+    .contact-page h2 {
+        margin-bottom: 20rem;
+    }
+    .contact-page {
+        justify-content: center;
+        column-gap: 60rem;
+    }
+    .flex-form {
+        flex-wrap: nowrap;
+    }
+    .checkbox-margin {
+        font-size: 13rem;
+        line-height: 1.61em;
+        margin: 0 13rem;
+    }
+    .justify-centr {
+        justify-content: center;
+    }
+    
+}
+
+@media screen and (min-width: 960px) {
+    .flex-between {
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        column-gap: 15rem;
+    }
+    .stick {
+        position: relative;
+    }
+    .stick::before {
+        content: "";
+        position: absolute;
+        right: -18px;
+        width: 1px;
+        height: 51px;
+        background-color: #e4e4ec;    
+    } 
+    .colum-call-back {
+        margin: 0;
+        text-align: right;
+    }
+    .main-contact h1 {
+        text-align: left;
+    }
+    .contact-page {
+        padding-left: 0;
+        padding-right: 60rem;
+    }
+} 
+
+@media screen and (min-width: 2560px) {
+    html {
+        font-size: 1.5px;
+    }  
+      
+    .icon::before,
+    a.fb,
+    a.tw,
+    a.inst {
+        transform-origin: top;
+        transform: scale(1.5);
+    }
 }

@@ -13,9 +13,18 @@
 </head>
 
 <body>
+    <!-- придумати логотип і спробувати анімувати -->
+        <!-- картинки відс 100% на розмірі 2560 або по всіх форматах, перевірити -->
+    <!-- подивитись шрифт і макет в інпутів -->
+
     <header class="container">
         <nav class="wrapper menu flex-between">
-            <ul class="main-menu">
+            <div class="burger" id="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="main-menu" id="menu">
                 <li><a href="index.html">Головна</a></li>
                 <li><a href="#">Про компанію</a></li>
                 <li><a href="price.html">Наші будівлі</a></li>
@@ -42,7 +51,7 @@
             <p><a class="e-mail icon" href="mailto:hataplus@hata.com.ua">hataplus@hata.com.ua</a></p>
             <p><a class="skype icon" href="skype:skypenick">hataplus</a></p>
         </div>
-        <a href="#" class="call-back colum">Замовити дзвінок</a>
+        <div class="colum colum-call-back"><a href="#" class="call-back">Замовити дзвінок</a></div>
     </div>
     <div class="img-text">
         <div class="wrapper">
@@ -134,32 +143,34 @@
     </div>
     <footer>
         <div class="navigation">
-            <div class="wrapper footer flex-between">
-                <ul class="colum">
-                    <li>
-                        <a href="#">Будинки</a>
-                    </li>
-                    <li>
-                        <a href="#">Інфраструктура</a>
-                    </li>
-                    <li>
-                        <a href="#">Сервіс</a>
-                    </li>
-                    <li>
-                        <a href="#">Новини</a>
-                    </li>
-                </ul>
-                <ul class="colum">
-                    <li>
-                        <a href="#">Про компанію</a>
-                    </li>
-                    <li>
-                        <a href="#">Страхування</a>
-                    </li>
-                    <li>
-                        <a href="#">Контакти</a>
-                    </li>
-                </ul>
+            <div class="wrapper justify-centr flex-between">
+                <div class="footer">
+                    <ul class="colum">
+                        <li>
+                            <a href="#">Будинки</a>
+                        </li>
+                        <li>
+                            <a href="#">Інфраструктура</a>
+                        </li>
+                        <li>
+                            <a href="#">Сервіс</a>
+                        </li>
+                        <li>
+                            <a href="#">Новини</a>
+                        </li>
+                    </ul>
+                    <ul class="colum">
+                        <li>
+                            <a href="#">Про компанію</a>
+                        </li>
+                        <li>
+                            <a href="#">Страхування</a>
+                        </li>
+                        <li>
+                            <a href="#">Контакти</a>
+                        </li>
+                    </ul>
+                </div>
                 <div class="phone colum">
                     <p><a class="tel icon" href="tel:+380971002525">+38(097) 100-25-25</a></p>
                     <p><a href="tel:+380971002525">+38(097) 100-25-25</a></p>
@@ -172,6 +183,12 @@
         </div>
         <p class="copyright">© Будівельна компанія “Хата Плюс” 2018.</p>
     </footer>
+    <script>
+        burger.onclick = function(){
+            menu.classList.toggle("menu-open")
+            burger.classList.toggle("burger-open")
+        }
+    </script>
 </body>
 
 </html>
